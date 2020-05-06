@@ -204,7 +204,7 @@ function saveApiKey(APIVALUE, htmlpush) {
 function generateTemplate(APIVALUE) {
 	console.log(APIVALUE);
 	var IID = $('#hiddenIID').val();
-	var screenshots = $('#screensLinks').val();
+	var Screenshots = $('#screensLinks').val();
 	var uToob = $('#ytLink').val();
 	var ddl = $('#ddl').val();
 	var MEDIAINFO = $('#mediaInfo').val();
@@ -245,10 +245,10 @@ function generateTemplate(APIVALUE) {
 		if (hideposts !== '0') {
 			ddl = `[HIDEPOSTS=${hideposts}]` + ddl + '[/HIDEPOSTS]';
 		}
-		if (screenshots) {
-			screenshots = screenshots.split(' ');
-			var screen = `\n[hr][/hr][indent][size=6][color=rgb(250, 197, 28)][b]Screenshots[/b][/color][/size][/indent]\n [Spoiler='screenshots']\n`;
-			for (let ss of screenshots) {
+		if (Screenshots) {
+			Screenshots = Screenshots.split(' ');
+			var screen = `\n[hr][/hr][indent][size=6][color=rgb(250, 197, 28)][b]Screenshots[/b][/color][/size][/indent]\n [Spoiler='Screenshots']\n`;
+			for (let ss of Screenshots) {
 				screen += `[img]${ss}[/img]`;
 			}
 			screen += `[/Spoiler] \n`;
@@ -334,9 +334,9 @@ function generateTemplate(APIVALUE) {
 						? '[*][B]Production: [/B] ' + json.Production + '\n'
 						: '';
 				MEDIAINFO =
-					"[hr][/hr][indent][size=6][color=rgb(250, 197, 28)][b]Media Info[/b][/color][/size][/indent]\n [spoiler='Click here to view Media Info']\n " +
+					"[hr][/hr][indent][size=6][color=rgb(250, 197, 28)][b]Media Info[/b][/color][/size][/indent]\n [spoiler='Click here to view Media Info'][ICODE]\n " +
 					MEDIAINFO +
-					'\n[/spoiler]\n';
+					'\n[/ICODE][/spoiler]\n';
 				ddl =
 					'[hr][/hr][center][size=6][color=rgb(250, 197, 28)][b]Download Link[/b][/color][/size]\n' +
 					ddl +
