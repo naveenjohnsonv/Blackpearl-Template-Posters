@@ -247,7 +247,7 @@ function generateTemplate(APIVALUE) {
 		}
 		if (Screenshots) {
 			Screenshots = Screenshots.split(' ');
-			var screen = `\n[hr][/hr][indent][size=6][color=rgb(250, 197, 28)][b]Screenshots[/b][/color][/size][/indent]\n [Spoiler='Screenshots']\n`;
+			var screen = `\n[hr][/hr][indent][size=6][color=rgb(57, 183, 60)][FONT=Trebuchet MS][b]Screenshots[/b][/FONT][/color][/size][/indent]\n [Spoiler='Screenshots']\n\n`;
 			for (let ss of Screenshots) {
 				screen += `[img]${ss}[/img]`;
 			}
@@ -256,7 +256,7 @@ function generateTemplate(APIVALUE) {
 			screen = '';
 		}
 		if (uToob.match(/[a-z]/)) {
-			var trailer = `\n[hr][/hr][indent][size=6][color=rgb(250, 197, 28)][b]Trailer[/b][/color][/size][/indent]\n ${uToob}`;
+			var trailer = `\n[hr][/hr][indent][size=6][color=rgb(57, 183, 60[FONT=Trebuchet MS]b]Trailer[/b][/FONT][/color][/size][/indent]\n ${uToob}`;
 		} else {
 			trailer = '';
 		}
@@ -270,7 +270,7 @@ function generateTemplate(APIVALUE) {
 						? '[center][img]' + json.Poster + '[/img]\n'
 						: '';
 				if (json.Title && json.Title !== 'N/A') {
-					var title = '[color=rgb(250, 197, 28)][b][size=6]' + json.Title;
+					var title = '[color=rgb(57, 183, 60)][FONT=Trebuchet MS][b][size=6]' + json.Title;
 				} else {
 					errors =
 						"You Messed Up! Check That You've Entered Something Into The IMDB Field!";
@@ -278,7 +278,7 @@ function generateTemplate(APIVALUE) {
 				}
 				let year =
 					json.Year && json.Year !== 'N/A'
-						? json.Year + ')[/size][/b][/color]\n'
+						? json.Year + ')[/size][/b][/FONT][/color]\n'
 						: '';
 				let imdbId =
 					json.imdbID && json.imdbID !== 'N/A'
@@ -288,7 +288,7 @@ function generateTemplate(APIVALUE) {
 						: '';
 				let rating =
 					json.imdbRating && json.imdbRating !== 'N/A'
-						? '[size=6][b]' + json.imdbRating + '[/b]/10[/size]\n'
+						? '[size=6][FONT=Trebuchet MS][b]' + json.imdbRating + '[/b][/FONT]/10[/size]\n'
 						: '';
 				let imdbvotes =
 					json.imdbVotes && json.imdbVotes !== 'N/A'
@@ -298,51 +298,51 @@ function generateTemplate(APIVALUE) {
 						: '';
 				let plot =
 					json.Plot && json.Plot !== 'N/A'
-						? '[hr][/hr][indent][size=6][color=rgb(250, 197, 28)][b]Plot[/b][/color][/size][/indent]\n\n ' +
+						? '[hr][/hr][indent][size=6][color=rgb(57, 183, 60)][FONT=Trebuchet MS][b]Plot[/b][/FONT][/color][/size][/indent]\n\n ' +
 						  json.Plot
 						: '';
 				let rated =
 					json.Rated && json.Rated !== 'N/A'
-						? '[B]Rating: [/B]' + json.Rated + '\n'
+						? '[FONT=Trebuchet MS][B]Rating: [/B][/FONT]' + json.Rated + '\n'
 						: '';
 				let genre =
 					json.Genre && json.Genre !== 'N/A'
-						? '[*][B]Genre: [/B] ' + json.Genre + '\n'
+						? '[*][FONT=Trebuchet MS][B]Genre: [/B][/FONT] ' + json.Genre + '\n'
 						: '';
 				let director =
 					json.Director && json.Director !== 'N/A'
-						? '[*][B]Directed By: [/B] ' + json.Director + '\n'
+						? '[*][FONT=Trebuchet MS][B]Directed By: [/B][/FONT] ' + json.Director + '\n'
 						: '';
 				let writer =
 					json.Writer && json.Writer !== 'N/A'
-						? '[*][B]Written By: [/B] ' + json.Writer + '\n'
+						? '[*][FONT=Trebuchet MS][B]Written By: [/B][/FONT] ' + json.Writer + '\n'
 						: '';
 				let actors =
 					json.Actors && json.Actors !== 'N/A'
-						? '[*][B]Starring: [/B] ' + json.Actors + '\n'
+						? '[*][FONT=Trebuchet MS][B]Starring: [/B][/FONT] ' + json.Actors + '\n'
 						: '';
 				let released =
 					json.Released && json.Released !== 'N/A'
-						? '[*][B]Release Date: [/B] ' + json.Released + '\n'
+						? '[*][FONT=Trebuchet MS][B]Release Date: [/B][/FONT] ' + json.Released + '\n'
 						: '';
 				let runtime =
 					json.Runtime && json.Runtime !== 'N/A'
-						? '[*][B]Runtime: [/B] ' + json.Runtime + '\n'
+						? '[*][FONT=Trebuchet MS][B]Runtime: [/B][/FONT] ' + json.Runtime + '\n'
 						: '';
 				let production =
 					json.Production && json.Production !== 'N/A'
-						? '[*][B]Production: [/B] ' + json.Production + '\n'
+						? '[*][FONT=Trebuchet MS][B]Production: [/B][/FONT] ' + json.Production + '\n'
 						: '';
 				MEDIAINFO =
-					"[hr][/hr][indent][size=6][color=rgb(250, 197, 28)][b]Media Info[/b][/color][/size][/indent]\n [spoiler='Click here to view Media Info'][ICODE]\n " +
+					"[hr][/hr][indent][size=6][color=rgb(57, 183, 60)][FONT=Trebuchet MS][b]Media Info[/b][/FONT][/color][/size][/indent]\n [spoiler='Click here to view Media Info'][ICODE]\n " +
 					MEDIAINFO +
 					'\n[/ICODE][/spoiler]\n';
 				ddl =
-					'[hr][/hr][center][size=6][color=rgb(250, 197, 28)][b]Download Link[/b][/color][/size]\n' +
+					'[hr][/hr][center][size=6][color=rgb(57, 183, 60)][FONT=Trebuchet MS][b]Download Link[/b][/FONT][/color][/size]\n' +
 					ddl +
 					'\n[/center]';
 				let dump = `${poster}${title} (${year}${imdbId} ${rating}${imdbvotes}${plot}${trailer}${screen}
-[hr][/hr][indent][size=6][color=rgb(250, 197, 28)][b]Movie Info[/b][/color][/size][/indent]
+[hr][/hr][indent][size=6][color=rgb(57, 183, 60)][FONT=Trebuchet MS][b]Movie Info[/b][/FONT][/color][/size][/indent]
 [LIST][*]${rated}${genre}${director}${writer}${actors}${released}${runtime}${production}[/LIST]\n${MEDIAINFO}${ddl}`;
 				GM_setClipboard(dump);
 				try {
