@@ -247,7 +247,7 @@ function generateTemplate(APIVALUE) {
 		}
 		if (Screenshots) {
 			Screenshots = Screenshots.split(' ');
-			var screen = `\n[hr][/hr][indent][size=6][color=rgb(57, 183, 60)][FONT=Trebuchet MS][b]Screenshots[/b][/FONT][/color][/size][/indent]\n [Spoiler='Screenshots']\n\n`;
+			var screen = `\n[hr][/hr][indent][size=6][color=rgb(57, 183, 60)][FONT=Trebuchet MS][b]Screenshots[/b][/FONT][/color][/size][/indent]\n [Spoiler='Screenshots']\n`;
 			for (let ss of Screenshots) {
 				screen += `[img]${ss}[/img]`;
 			}
@@ -256,7 +256,7 @@ function generateTemplate(APIVALUE) {
 			screen = '';
 		}
 		if (uToob.match(/[a-z]/)) {
-			var trailer = `\n[hr][/hr][indent][size=6][color=rgb(57, 183, 60[FONT=Trebuchet MS]b]Trailer[/b][/FONT][/color][/size][/indent]\n ${uToob}`;
+			var trailer = `\n[hr][/hr][indent][size=6][color=rgb(57, 183, 60)[FONT=Trebuchet MS][b]Trailer[/b][/FONT][/color][/size][/indent]\n\n ${uToob}`;
 		} else {
 			trailer = '';
 		}
@@ -288,13 +288,13 @@ function generateTemplate(APIVALUE) {
 						: '';
 				let rating =
 					json.imdbRating && json.imdbRating !== 'N/A'
-						? '[size=6][FONT=Trebuchet MS][b]' + json.imdbRating + '[/b][/FONT]/10[/size]\n'
+						? '[size=6][FONT=Trebuchet MS][b]' + json.imdbRating + '[/b]/10[/FONT][/size]\n'
 						: '';
 				let imdbvotes =
 					json.imdbVotes && json.imdbVotes !== 'N/A'
-						? '[size=6][img]https://i.imgur.com/sEpKj3O.png[/img]' +
+						? '[size=6][FONT=Trebuchet MS][img]https://i.imgur.com/sEpKj3O.png[/img]' +
 						  json.imdbVotes +
-						  '[/size][/center]\n'
+						  '[/size][/FONT][/center]\n'
 						: '';
 				let plot =
 					json.Plot && json.Plot !== 'N/A'
@@ -303,35 +303,35 @@ function generateTemplate(APIVALUE) {
 						: '';
 				let rated =
 					json.Rated && json.Rated !== 'N/A'
-						? '[FONT=Trebuchet MS][B]Rating: [/B][/FONT]' + json.Rated + '\n'
+						? '[FONT=Trebuchet MS][B]Rating: [/B]' + json.Rated + '[/FONT]\n'
 						: '';
 				let genre =
 					json.Genre && json.Genre !== 'N/A'
-						? '[*][FONT=Trebuchet MS][B]Genre: [/B][/FONT] ' + json.Genre + '\n'
+						? '[*][FONT=Trebuchet MS][B]Genre: [/B] ' + json.Genre + '[/FONT]\n'
 						: '';
 				let director =
 					json.Director && json.Director !== 'N/A'
-						? '[*][FONT=Trebuchet MS][B]Directed By: [/B][/FONT] ' + json.Director + '\n'
+						? '[*][FONT=Trebuchet MS][B]Directed By: [/B] ' + json.Director + '[/FONT]\n'
 						: '';
 				let writer =
 					json.Writer && json.Writer !== 'N/A'
-						? '[*][FONT=Trebuchet MS][B]Written By: [/B][/FONT] ' + json.Writer + '\n'
+						? '[*][FONT=Trebuchet MS][B]Written By: [/B] ' + json.Writer + '[/FONT]\n'
 						: '';
 				let actors =
 					json.Actors && json.Actors !== 'N/A'
-						? '[*][FONT=Trebuchet MS][B]Starring: [/B][/FONT] ' + json.Actors + '\n'
+						? '[*][FONT=Trebuchet MS][B]Starring: [/B] ' + json.Actors + '[/FONT]\n'
 						: '';
 				let released =
 					json.Released && json.Released !== 'N/A'
-						? '[*][FONT=Trebuchet MS][B]Release Date: [/B][/FONT] ' + json.Released + '\n'
+						? '[*][FONT=Trebuchet MS][B]Release Date: [/B] ' + json.Released + '[/FONT]\n'
 						: '';
 				let runtime =
 					json.Runtime && json.Runtime !== 'N/A'
-						? '[*][FONT=Trebuchet MS][B]Runtime: [/B][/FONT] ' + json.Runtime + '\n'
+						? '[*][FONT=Trebuchet MS][B]Runtime: [/B] ' + json.Runtime + '[/FONT]\n'
 						: '';
 				let production =
 					json.Production && json.Production !== 'N/A'
-						? '[*][FONT=Trebuchet MS][B]Production: [/B][/FONT] ' + json.Production + '\n'
+						? '[*][FONT=Trebuchet MS][B]Production: [/B] ' + json.Production + '[/FONT]\n'
 						: '';
 				MEDIAINFO =
 					"[hr][/hr][indent][size=6][color=rgb(57, 183, 60)][FONT=Trebuchet MS][b]Media Info[/b][/FONT][/color][/size][/indent]\n [spoiler='Click here to view Media Info'][ICODE]\n " +
