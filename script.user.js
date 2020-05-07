@@ -247,7 +247,7 @@ function generateTemplate(APIVALUE) {
 		}
 		if (Screenshots) {
 			Screenshots = Screenshots.split(' ');
-			var screen = `\n[hr][/hr][indent][size=6][color=rgb(57, 183, 60)][FONT=Trebuchet MS][b]Screenshots[/b][/color][/size][/indent]\n [Spoiler='Screenshots'][/FONT]\n`;
+			var screen = `\n[hr][/hr][indent][size=6][color=rgb(57, 183, 60)][FONT=Trebuchet MS][b]Screenshots[/b][/FONT][/color][/size][/indent]\n [Spoiler='Screenshots']\n`;
 			for (let ss of Screenshots) {
 				screen += `[img]${ss}[/img]`;
 			}
@@ -335,7 +335,7 @@ function generateTemplate(APIVALUE) {
 						? '[*][FONT=Trebuchet MS][B]Production: [/B] ' + json.Production + '[/FONT]\n'
 						: '';
 				MEDIAINFO =
-					"[hr][/hr][indent][size=6][color=rgb(57, 183, 60)][FONT=Trebuchet MS][b]Media Info[/b][/color][/size][/indent]\n [spoiler='Click here to view Media Info'][/FONT][ICODE]\n " +
+					"[hr][/hr][indent][size=6][color=rgb(57, 183, 60)][FONT=Trebuchet MS][b]Media Info[/b][/FONT][/color][/size][/indent]\n [spoiler='Click here to view Media Info'][ICODE]\n " +
 					MEDIAINFO +
 					'\n[/ICODE][/spoiler]\n';
 				ddl =
