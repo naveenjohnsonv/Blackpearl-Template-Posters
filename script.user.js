@@ -256,7 +256,7 @@ function generateTemplate(APIVALUE) {
 			screen = '';
 		}
 		if (uToob.match(/[a-z]/)) {
-			var trailer = `\n[hr][/hr][indent][size=6][color=rgb(57, 183, 60)[FONT=Trebuchet MS][b]Trailer[/b][/FONT][/color][/size][/indent]\n\n ${uToob}`;
+			var trailer = `\n[hr][/hr][indent][size=6][color=rgb(57, 183, 60)][FONT=Trebuchet MS][b]Trailer[/b][/FONT][/color][/size][/indent]\n\n ${uToob}`;
 		} else {
 			trailer = '';
 		}
