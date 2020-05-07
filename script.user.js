@@ -298,7 +298,7 @@ function generateTemplate(APIVALUE) {
 						: '';
 				let plot =
 					json.Plot && json.Plot !== 'N/A'
-						? '[hr][/hr][indent][size=6][color=rgb(57, 183, 60)][FONT=Trebuchet MS][b]Plot[/b][/color][/size][/indent]\n\n ' +
+						? '[hr][/hr][indent][size=6][color=rgb(57, 183, 60)][FONT=Trebuchet MS][b]Plot[/b][/color][/size][/indent]\n' +
 						  json.Plot +
 						  '[/FONT]'
 						: '';
